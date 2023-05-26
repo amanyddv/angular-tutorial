@@ -1,0 +1,73 @@
+<!-- #myForm ="ngForm" this equal string created the javascript object and reference variable output is html  -->
+<!-- import ngForm in ts file  -->
+<form  (ngSubmit)="onSubmit(Form)" #Form="ngForm" >
+    <div >
+      <div class="col">
+        <input type="text" class="form-control"  name="name" ngModel placeholder="First name">
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" name="email" ngModel placeholder="email">
+      </div>
+    </div>
+    <button  type="submit" class="btn btn-success">submit</button>
+  </form>
+
+  <br><br><br>
+
+  <!-- using viewChild -->
+
+  <form  (ngSubmit)="Submit()" #myForm="ngForm" >
+    <div >
+      <div class="col">
+        <input type="text" class="form-control"  name="name" ngModel  required  placeholder="First name*">
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" name="email" ngModel  required placeholder="email*">
+      </div>
+    </div>
+    <div *ngFor ="let gender of genders" >
+        <input type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" [ngModel]="defalutGender">
+    <label for="{{gender.id}}" >{{gender.value}}</label>
+    </div>
+    <button  type="submit" class="btn btn-success" [disabled]="!myForm.valid">submit</button>
+  </form>
+
+  <br><br>
+
+  <!-- using viewChild -->
+  <!-- check css ng-valid and ng-touched are used -->
+  <form  (ngSubmit)="Submit()" #myForm="ngForm" >
+    <div >
+      <div class="col">
+        <input type="text" class="form-control"  name="name" ngModel  required  placeholder="First name*">
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" name="email" #email="ngModel" ngModel required placeholder="email*">
+        <small  *ngIf="!email.valid && email.touched" class="text-danger">please enter valid email</small>
+      </div>
+    </div>
+    <button  type="submit" class="btn btn-success" >submit</button>
+  </form>
+
+  <!-- grouping data -->
+  <form  (ngSubmit)="Submit()" #myForm="ngForm" >
+    <div >
+        <div ngModelGroup="userName" #userName="ngModelGroup">
+      <div class="col">
+        <input type="text" class="form-control"  name="name" ngModel  required  placeholder="First name*">
+      </div>
+    </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" name="email" #email="ngModel" ngModel required placeholder="email*">
+        <small  *ngIf="!email.valid && email.touched" class="text-danger">please enter valid email</small>
+      </div>
+    </div>
+    <button  type="submit" class="btn btn-success" >submit</button>
+  </form>
+
+
+

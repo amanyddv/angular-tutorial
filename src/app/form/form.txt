@@ -1,0 +1,11 @@
+types of forms
+1. Template driven Forms{
+    simple basic form
+    easy to StructuralComponent
+    based on template(HTML)
+}
+2.Reactive Forms{
+    complex form with greater control
+    we defines structure of form in ts 
+    based on typescript
+}

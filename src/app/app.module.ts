@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { StructuralComponent } from './directive/structural/structural.component';
+import { TemplateDrivenFormComponent } from './form/template-driven-form/template-driven-form.component';
 
 
 // import classes and declaration in ngModule for later use
@@ -32,6 +33,7 @@ import { StructuralComponent } from './directive/structural/structural.component
     TwoWayDataBindingComponent,
     BootstrapComponent,
     StructuralComponent,
+    TemplateDrivenFormComponent,
 
 
   ],
