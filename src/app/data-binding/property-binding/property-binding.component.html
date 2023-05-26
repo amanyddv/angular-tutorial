@@ -1,0 +1,18 @@
+<input type="text" name="" [value]="name"> <br>
+<input type="text" name="" bind-value="name"> <br>
+
+<!-- In interpolation only string binding only use , property binding use non string like boolean -->
+<input type="text" name=""  disabled [value]="name"> <br>
+<input type="text" name=""  [disabled]="disabled" [value]="name"> <br>
+<input type="text" name=""  [hidden]="hidden" [value]="name"> <br>
+
+<!-- ternary operator -->
+<!--  Note pay attention on double quotes and single quotes -->
+<input type="text" name=""   [value]="appStatus? 'online' : 'offline'"> <br>
+
+<!-- using variable -->
+<input type="text" name=""   [value]="appStatus? online : offline"> <br>
+
+
+s
+

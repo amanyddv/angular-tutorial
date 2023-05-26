@@ -1,0 +1,23 @@
+<!-- event binding used for an action while click on button ,mouse drag and dop , input in input field
+event find the data view to component -->
+
+<!-- this is not usable event handler in angular -->
+<button onclick="handleClick()">old One</button>
+
+<!-- use event binding -->
+<button (click)="handleClick()">angular event binding</button>
+
+<P>{{msg}}</P>
+
+<br>
+<!-- value form event -->
+<button (click)="handleEvent($event)" value="heyy">angular event binding</button>
+
+<br>
+
+
+<!-- template/local-reference-variable -->
+<input #inputInfo type="text" name="" id=""  value="information">
+<button (click)="getinfo(inputInfo)">getInfo </button>
+
+

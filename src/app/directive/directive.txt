@@ -1,0 +1,13 @@
+directive are basically instruction which change the behaviour and appearence of Dom 
+three types of directive 
+1. Component
+2. Structural {
+    manipulating the dom elements, it is of three types 
+    1.ngIf
+    2.ngFor
+    3.ngSwitch
+}
+3.Attributes directive{
+    change the look and behaviour of the dom , it is of two types
+    ngStyle and ngClass
+}

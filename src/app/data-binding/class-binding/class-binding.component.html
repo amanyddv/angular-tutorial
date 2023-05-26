@@ -1,0 +1,34 @@
+<div class="box" [class.myclass]="true">
+
+</div>
+
+<br>
+<br>
+<div class="box" [style.margin]="myStyle">
+
+</div>
+
+<br><br>
+
+<div class="box" [style.margin]=" isActive ? myStyle : '0px'"> </div>
+
+    <!-- using class binding we can bind only single class , to bind multiple class use ngStyle and ngClass -->
+
+    <br>
+<div class="box" [ngClass]="'class1 class2 class3'"></div>
+<br>
+<div class="box" [ngClass]="allClasses"> </div>
+
+<!-- ngStyle -->
+<br>
+<br>
+<div [ngStyle]="{
+    'width': '10%',
+    'height': '20vw',
+    'background-color': 'red',
+}"> </div>
+
+<br>
+<br>
+
+<div [ngStyle]="mltStyle"> </div>
