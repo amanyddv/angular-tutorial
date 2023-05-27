@@ -9,7 +9,9 @@ import { ClassBindingComponent } from './data-binding/class-binding/class-bindin
 import { EventBindingComponent } from './data-binding/event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './data-binding/two-way-data-binding/two-way-data-binding.component';
 
+//form
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // for ngx bootstrap
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +19,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { StructuralComponent } from './directive/structural/structural.component';
 import { TemplateDrivenFormComponent } from './form/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 
 
 // import classes and declaration in ngModule for later use
@@ -34,6 +37,7 @@ import { TemplateDrivenFormComponent } from './form/template-driven-form/templat
     BootstrapComponent,
     StructuralComponent,
     TemplateDrivenFormComponent,
+    ReactiveFormComponent,
 
 
   ],
@@ -43,6 +47,7 @@ import { TemplateDrivenFormComponent } from './form/template-driven-form/templat
     FormsModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
+    ReactiveFormsModule,
 
   ],
   providers: [],

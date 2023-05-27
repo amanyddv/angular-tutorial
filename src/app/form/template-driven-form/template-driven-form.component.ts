@@ -23,4 +23,5 @@ export class TemplateDrivenFormComponent {
     console.log(this.myForm.value)
     
   }
+  value=true;
 }

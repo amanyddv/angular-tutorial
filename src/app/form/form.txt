@@ -9,3 +9,11 @@ types of forms
     we defines structure of form in ts 
     based on typescript
 }
+
+NgForm create object of form while using template reference variable
+
+ngModel tell the define control or input field is the the part of form
+
+setValue and patchValue are two way to set value of form or input field
+
+this.myform.reset(); is used for reset input field and their state

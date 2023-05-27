@@ -1,0 +1,32 @@
+<!-- import ReactiveFormsModule -->
+
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+  <div>
+    <div class="col" formGroupName="userdetail">
+      <input type="text" class="form-control" name="name" formControlName="name" placeholder="First name*">
+      <small *ngIf="!myReactiveForm.get('userdetail.name')?.valid && myReactiveForm.get('userdetail.name')?.touched"
+      class="text-danger">
+      <span *ngIf="myReactiveForm.get('userdetail.name')?.errors?.['required']"> user name is not valid</span>
+      <span  *ngIf="myReactiveForm.get('userdetail.name')?.errors?.['nameIsNotAllowed']">{{myReactiveForm.get('userdetail.name')?.value}} is not allowed</span>
+
+    </small>
+
+    </div>
+    <br>
+    <div class="col">
+      <input type="text" class="form-control" name="email" formControlName="email" placeholder="email*">
+      <small *ngIf="!myReactiveForm.get('email')?.valid && myReactiveForm.get('email')?.touched"
+        class="text-danger">please enter valid email</small>
+    </div>
+    <div class="col" class="form-group" formArrayName="skills" formGroupName="userdetail">
+      <ng-container *ngFor="let skillControl of skillsFormArray.controls;index as i">
+
+        <input type="text" class="form-control" formControlName="{{i}}" placeholder="skills*">
+      </ng-container>
+      <button class="mt-3 btn btn-light btn-sm btn-add" (click)="addSkill()">+Add skills</button>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn mt-3 btn-success">submit</button>
+</form>

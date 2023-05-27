@@ -17,7 +17,7 @@
 
   <!-- using viewChild -->
 
-  <form  (ngSubmit)="Submit()" #myForm="ngForm" >
+  <!-- <form  (ngSubmit)="Submit()" #myForm="ngForm" >
     <div >
       <div class="col">
         <input type="text" class="form-control"  name="name" ngModel  required  placeholder="First name*">
@@ -32,7 +32,7 @@
     <label for="{{gender.id}}" >{{gender.value}}</label>
     </div>
     <button  type="submit" class="btn btn-success" [disabled]="!myForm.valid">submit</button>
-  </form>
+  </form> -->
 
   <br><br>
 
@@ -51,8 +51,8 @@
     </div>
     <button  type="submit" class="btn btn-success" >submit</button>
   </form>
-
-  <!-- grouping data -->
+<!-- 
+   grouping data
   <form  (ngSubmit)="Submit()" #myForm="ngForm" >
     <div >
         <div ngModelGroup="userName" #userName="ngModelGroup">
@@ -68,6 +68,6 @@
     </div>
     <button  type="submit" class="btn btn-success" >submit</button>
   </form>
-
+ -->
 
 
