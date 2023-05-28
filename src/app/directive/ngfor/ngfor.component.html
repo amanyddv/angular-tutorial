@@ -1,0 +1,19 @@
+<table class="table">
+    <tbody>
+        <!-- use odd , even , first, last instead of index -->
+        <tr *ngFor="let mypro of product ; index as i">
+            <td>{{i+1}}</td>
+            <td> product image</td>
+            <td>{{mypro.name}} </td>
+            <td>{{mypro.id}} </td>
+            <td>{{mypro.price}} </td>
+            <td><button (click)="deleteUser(i)" class="btn btn-danger">Remove</button></td>
+
+        </tr>
+        </tbody>
+        <button (click)="createUser()" class="btn btn-success">ADD</button>
+        <button (click)="removeUser()" class="btn btn-danger">Remove</button>
+
+</table>
+
+

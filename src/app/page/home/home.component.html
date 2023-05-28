@@ -1,0 +1,7 @@
+ng container are used here
+<p>home works!</p>
+<div class="products">
+    <ng-container *ngIf="statusOnline">
+    <div  *ngFor="let item of products">{{item.name}}</div>
+    </ng-container>
+</div>

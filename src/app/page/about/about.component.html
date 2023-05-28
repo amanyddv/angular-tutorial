@@ -1,0 +1,45 @@
+<div>parent component , for input and custom property</div>
+
+<div class="alert alert-primary border d-flex align-item-center " *ngIf="addedProduct">
+    <strong class="text-success">{{addedProduct}}</strong>
+    <button class="btn btn-success ml-auto">checkout</button>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="display: flex;">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Laptop">
+            <div class="card-body">
+                <h5 class="card-title">Laptop</h5>
+                
+                <a (click)="onSelect('laptop')" class="btn btn-success">select this product</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="TV">
+            <div class="card-body">
+                <h5 class="card-title">TV</h5>
+                
+                <a (click)="onSelect('Tv')" class="btn btn-success">select this product</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Washing Machine">
+            <div class="card-body">
+                <h5 class="card-title">Washing Machine</h5>
+                
+                <a (click)="onSelect('wash Machine')" class="btn btn-success">select this product</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Phone">
+            <div class="card-body">
+                <h5 class="card-title">Phone</h5>
+                
+                <a (click)="onSelect('Phone')" class="btn btn-success">select this product</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" >
+</div>
+<app-child [productselected]="proselected" [selectedProduct]="selProduct" (addedProduct)="onAddedProduct($event)"></app-child>

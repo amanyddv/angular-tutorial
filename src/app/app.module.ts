@@ -20,6 +20,19 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { StructuralComponent } from './directive/structural/structural.component';
 import { TemplateDrivenFormComponent } from './form/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { NgswitchComponent } from './directive/ngswitch/ngswitch.component';
+import { NgforComponent } from './directive/ngfor/ngfor.component';
+import { HomeComponent } from './page/home/home.component';
+import { AboutComponent } from './page/about/about.component';
+import { ProductComponent } from './page/product/product.component';
+import { AboutusComponent } from './page/aboutus/aboutus.component';
+import { TvComponent } from './product/tv/tv.component';
+import { PhoneComponent } from './product/phone/phone.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
+import { ContactComponent } from './page/contact/contact.component';
+import { CardComponent } from './component/card/card.component';
+import { ChildComponent } from './component/child/child.component';
 
 
 // import classes and declaration in ngModule for later use
@@ -38,6 +51,19 @@ import { ReactiveFormComponent } from './form/reactive-form/reactive-form.compon
     StructuralComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    NgswitchComponent,
+    NgforComponent,
+    HomeComponent,
+    AboutComponent,
+    ProductComponent,
+    AboutusComponent,
+    TvComponent,
+    PhoneComponent,
+    LaptopComponent,
+    WashingMachineComponent,
+    ContactComponent,
+    CardComponent,
+    ChildComponent,
 
 
   ],
