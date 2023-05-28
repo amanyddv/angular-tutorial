@@ -1,0 +1,31 @@
+when components are using common varible then for updation subject is used
+
+in service file
+userName =new subject<any>();
+
+in all component subscribe subject and import service
+constructor(private _subject:service){
+    this._subject.userName.subscribe(uname=>{
+        this.userName=uname
+    })
+}
+
+updateValue(uname){
+    this._subject.userName.next(uname.value)
+}
+
+html
+{{username}}
+input-userName
+
+Behaviour subject is alternative of subject , it used for initialize value 
+in service file
+userName=new BehaviourSubject('jhon')
+
+different method to access API 
+get-> to access data but limited or unsafe
+fetch->to get data safely
+post ->  to add data and every time create new node
+put -> to update data with providing all detail
+patch-> to update data with minimum detail
+delete ->  to delete all the data 
