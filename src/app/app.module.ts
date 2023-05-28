@@ -33,6 +33,7 @@ import { WashingMachineComponent } from './product/washing-machine/washing-machi
 import { ContactComponent } from './page/contact/contact.component';
 import { CardComponent } from './component/card/card.component';
 import { ChildComponent } from './component/child/child.component';
+import { TestDirective } from './appDirective/test.directive';
 
 
 // import classes and declaration in ngModule for later use
@@ -64,6 +65,7 @@ import { ChildComponent } from './component/child/child.component';
     ContactComponent,
     CardComponent,
     ChildComponent,
+    TestDirective,
 
 
   ],

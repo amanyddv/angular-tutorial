@@ -1,7 +1,17 @@
 ng container are used here
 <p>home works!</p>
-<div class="products">
+<div class="products" style="height:300px">
     <ng-container *ngIf="statusOnline">
     <div  *ngFor="let item of products">{{item.name}}</div>
     </ng-container>
 </div>
+
+<div #box appTest>
+    <h1>user name is <span>{{username}}</span></h1>
+</div>
+<div>
+    <input type="text">
+</div>
+<br><br>
+<button (click)="change()">click me</button>
+<app-child> <p #childcon>this is ng content</p></app-child>

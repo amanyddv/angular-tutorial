@@ -29,3 +29,13 @@ post ->  to add data and every time create new node
 put -> to update data with providing all detail
 patch-> to update data with minimum detail
 delete ->  to delete all the data 
+
+
+lifecycle hooks
+
+ViewChild is used for dom manipulation but ViewChild is not right way use rerender
+
+
+ng g d appDirective/test to create directive for ViewChild
+
+host element--> the element that we apply our directive on is the host element of that directive that host our directive sot that is hostelement

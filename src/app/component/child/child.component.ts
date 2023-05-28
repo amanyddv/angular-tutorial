@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChild, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -12,5 +12,9 @@ export class ChildComponent {
   @Input() selectedProduct:any
   addCart(){
     this.addedProduct.emit(this.selectedProduct);
+  }
+  @ContentChild('childcon') childpara!:ElementRef;
+  ngAfterViewInit(){
+    console.log(this.childpara)
   }
 }
