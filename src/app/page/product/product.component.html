@@ -39,3 +39,45 @@
     </div>
     <div class="col-md-4"><router-outlet></router-outlet></div>
 </div>
+<h5>
+pipes</h5><br>
+<h4>{{value | uppercase | slice:1:11}}</h4>
+<h4>{{value | pipe1}}</h4>
+<h4>{{date | date:'short' | uppercase}}</h4>
+<h4>{{date | date:'medium'}}</h4>
+<h4>{{date | date:'shortTime'}}</h4>
+
+<br><br>
+<ul>
+    <li *ngFor="let name of nameArr">
+        {{name | pipe1}}
+
+    </li>
+</ul>
+<br><br><br>
+filter pipe used here
+<div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" [(ngModel)]="nameSearch" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+    <table class="table">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">product name</th>
+            <th scope="col">price</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productArr |filter:nameSearch">
+            <th scope="row">1</th>
+            <td>{{product.sno}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+          </tr>
+           </tbody>
+      </table>
+</div>

@@ -34,6 +34,8 @@ import { ContactComponent } from './page/contact/contact.component';
 import { CardComponent } from './component/card/card.component';
 import { ChildComponent } from './component/child/child.component';
 import { TestDirective } from './appDirective/test.directive';
+import { Pipe1Pipe } from './appPipes/pipe1.pipe';
+import { FilterPipe } from './appPipes/filter.pipe';
 
 
 // import classes and declaration in ngModule for later use
@@ -66,6 +68,8 @@ import { TestDirective } from './appDirective/test.directive';
     CardComponent,
     ChildComponent,
     TestDirective,
+    Pipe1Pipe,
+    FilterPipe,
 
 
   ],
